@@ -1,9 +1,4 @@
 <?php
-require_once('resources.php');
-
-use resources\Database;
-
-$db = new Database();
 $navUri = 'home';
 $mainContent = "
     <div class=\"col-lg-12\">

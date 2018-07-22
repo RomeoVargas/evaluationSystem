@@ -12,7 +12,7 @@ class Database
 
     public function __construct()
     {
-        $constants = json_decode(file_get_contents('constants.json'), true);
+        $constants = json_decode(file_get_contents(__DIR__.'\..\constants.json'), true);
         $this->host     = $constants['DB_HOST'];
         $this->user     = $constants['DB_USERNAME'];
         $this->password = $constants['DB_PASSWORD'];
@@ -26,5 +26,10 @@ class Database
         }
 
         $this->connection = $conn;
+    }
+
+    public function getConnection()
+    {
+        return $this->connection;
     }
 }

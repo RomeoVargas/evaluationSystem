@@ -1,7 +1,7 @@
 <?php
 $resourcesDir = isset($resourcesDir) ? $resourcesDir : 'resources';
 require_once($resourcesDir.'/Navigation.php');
-
+require_once($resourcesDir.'/../resources.php');
 use resources\Navigation;
 ?>
 
@@ -16,6 +16,7 @@ use resources\Navigation;
 
     <!-- Bootstrap -->
     <link href="<?= $resourcesDir ?>/css/bootstrap.min.css" rel="stylesheet">
+    <link href="<?= $resourcesDir ?>/css/jasny-bootstrap.min.css" rel="stylesheet">
 </head>
 <body>
 <div class="container-fluid">
@@ -34,5 +35,6 @@ use resources\Navigation;
 <script src="<?= $resourcesDir ?>/js/jquery-3.3.1.min.js"></script>
 <!-- Include all compiled plugins (below), or include individual files as needed -->
 <script src="<?= $resourcesDir ?>/js/bootstrap.min.js"></script>
+<script src="<?= $resourcesDir ?>/js/jasny-bootstrap.min.js"></script>
 </body>
 </html>

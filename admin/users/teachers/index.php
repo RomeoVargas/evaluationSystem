@@ -2,12 +2,13 @@
 $navUri = 'adminteachers';
 $mainContent = "
     <div class='col-lg-offset-1 col-lg-10'>
+    <!-- Trigger the modal with a button -->
         <div class='panel panel-primary'>
             <div class='panel-heading'>
                 <div class='row' style='vertical-align: middle'>
                     <h3 class='panel-title col-lg-10' style='line-height: 30px'>Teacher Management</h3>
                     <div class='col-lg-2' style='text-align: right'>
-                        <a href='#' class='btn btn-sm btn-success'><i class='glyphicon glyphicon-plus-sign'></i> Add Teacher</a>
+                        <a data-toggle='modal' data-target='#addTeacherModal' class='btn btn-sm btn-success'><i class='glyphicon glyphicon-plus-sign'></i> Add Teacher</a>
                     </div>
                 </div>
             </div>
@@ -42,4 +43,5 @@ $mainContent = "
 
 $resourcesDir = '../../../resources';
 require_once('../../../layouts/main.php');
+require_once ('modals/add.php')
 ?>

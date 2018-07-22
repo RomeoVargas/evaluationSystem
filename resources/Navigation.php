@@ -70,7 +70,7 @@ class Navigation
             </li>
             <li role='presentation' class='%s'><a href='%squestionnaires.php'>Questionnaires</a></li>
             <li role='presentation' class='%s'><a href='%sreports.php'>Reports</a></li>
-            <li role='presentation'><a href='#'>Logout</a></li>
+            <li role='presentation'><a href='%s../app/Requests/admin/logout.php'>Logout</a></li>
         </ul>
     ";
 
@@ -89,7 +89,7 @@ class Navigation
         }
 
         if ($isAdminUri) {
-            $uriBack = (in_array($uri, self::$nestAdminUris)) ? '../' : '';
+            $uriBack = (in_array($uri, self::$nestAdminUris)) ? ($uri == 'adminteachers' ? '../../' : '../') : '';
 
             return sprintf(
                 $navTemplate,
@@ -97,7 +97,8 @@ class Navigation
                 $adminteachers, $adminstudents, $adminadmins, $uriBack, $uriBack, $uriBack,
                 $adminteacherstudent, $adminstudentteacher, $uriBack, $uriBack,
                 $adminquestionnaires, $uriBack,
-                $adminreports, $uriBack
+                $adminreports, $uriBack,
+                $uriBack
             );
         }
 
